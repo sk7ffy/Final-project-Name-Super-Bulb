@@ -6,6 +6,7 @@ class Button(sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
 
+
         self.cliked = False
 
     def draw(self,window):
