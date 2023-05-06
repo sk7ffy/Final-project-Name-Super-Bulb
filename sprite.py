@@ -14,11 +14,10 @@ class Player(Sprite):
     def move(self):
         keys = key.get_pressed()
         if keys[K_LEFT]:
-            self.rect.x -= 5
+            self.rect.x -= 8
         if keys[K_RIGHT]:
-            self.rect.x += 5
-        if keys[K_SPACE]:
-            self.is_jump = True
+            self.rect.x += 8
+        
         
     def jump(self):
         if self.is_jump:
