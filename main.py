@@ -9,7 +9,10 @@ game = True
 start_btn = Button(250,200,200,80,'start.png')
 exit_btn = Button(250,400,200,100,'exit.png')
 player = Player(100,200,50,50,'player.png')
-floor = Sprite(15,380,1000,200,'floor.png')
+floor1 = Sprite(15,480,1000,200,'floor1.png')
+island4 = Sprite(200,420,170,170,'island4.png')
+island5 = Sprite(10,120,170,170,'island4.png')
+island6 = Sprite(400,120,170,170,'island4.png')
 
 bg = image.load('background.png')
 bg=transform.scale(bg,(900,500))
@@ -31,10 +34,20 @@ while game:
         if player.is_jump == False:
             player.rect.y += 5
 
-        if player.rect.colliderect(floor.rect) :
-            player.rect.bottom = floor.rect.top
+        if player.rect.colliderect(floor1.rect) :
+            player.rect.bottom = floor1.rect.top
         player.draw(main_win)
-        floor.draw(main_win)
+        floor1.draw(main_win)
+        island4.draw(main_win)
+        island5.draw(main_win)
+        island6.draw(main_win)
+        if player.rect.colliderect(island4.rect):
+            player.rect.bottom = island4.rect.top
+        if player.rect.colliderect(island5.rect):
+            player.rect.bottom = island5.rect.top
+        if player.rect.colliderect(island6.rect):
+            player.rect.bottom = island6.rect.top
+
 
     else:
         main_win.fill((0,0,0))
@@ -45,7 +58,7 @@ while game:
                
 
     display.update()
-    clock.tick(60)
+    clock.tick(120)
 
 
 
