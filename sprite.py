@@ -26,4 +26,4 @@ class Player(Sprite):
                 self.jumpCount -= 1
             else:
                 self.is_jump = False
-                self.jumpCount = 6
+                self.jumpCount = 8

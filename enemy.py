@@ -4,9 +4,9 @@ class Enemy(Sprite):
     direction = "left"
 
     def move(self):
-        if self.rect.x < 400:
+        if self.rect.x < 350:
             self.direction = 'right'
-        if self.rect.x > 650:
+        if self.rect.x > 550:
             self.direction= 'left'
         
         if self.direction == 'left':
