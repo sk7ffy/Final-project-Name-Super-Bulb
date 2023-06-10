@@ -9,7 +9,7 @@ mixer.music.load('328.mp3')
 mixer.music.play()
 score = 0
 mixer.music.load('deadsound.mp3')
-
+hit = False
 main_win = display.set_mode((1300,500))
 font.init()
 font = font.SysFont("Arial", 32)
@@ -24,7 +24,7 @@ start_btn = Button(550,200,200,200,'start.png')
 exit_btn = Button(550,400,200,100,'exit.png')
 player= Player(100,200,50,50,'player111.png')
 enemy = Enemy(300,410,45,50,'enemy3.png')
-enemy2 = Enemy(200,200,45,50,'enemy3.png')
+enemy2 = Enemy(200,230,45,50,'enemy3.png')
 floor1 = Sprite(15,480,1500,200,'floor1.png')
 islan = Sprite(200,227,150,50,'islan.png')
 island5 = Sprite(10,320,150,50,'islan.png')
@@ -41,6 +41,7 @@ bg=transform.scale(bg,(1500,500))
 bg2 = image.load('buts.jpg')
 bg2 = transform.scale(bg2,(1500,500))
 
+bullets = sprite.Group()
 
 run = False
 level = 0
